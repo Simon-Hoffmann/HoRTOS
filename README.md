@@ -4,10 +4,10 @@
 ## Features
 
 1. Round robin scheduler:
-- Priority based scheduling
-- Tasks can block
-- Tasks can sleep
-- Tasks can be stopped or resumed
+  - Priority based scheduling
+  - Tasks can block
+  - Tasks can sleep
+  - Tasks can be stopped or resumed
 
 2. Semaphores for exclusive access
 
