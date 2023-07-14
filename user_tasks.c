@@ -81,8 +81,7 @@ void uart_receive_task(uint32_t param){
 			task_sleep(50);
 			continue;
 		}
-		fifo_put(data);
-		
+		fifo_put(data);	
 		
 		if(data == 0x0D){	//carriage return
 			cmd_execute(command);
@@ -94,8 +93,3 @@ void uart_receive_task(uint32_t param){
 		}
 	}
 }
-
-
-
-
-

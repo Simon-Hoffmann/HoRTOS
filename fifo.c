@@ -46,6 +46,7 @@ void fifo_init(void){
 void fifo_put(uint8_t data){
 	semaphore_wait(&FIFOmutex);
 	if(CurrentSize == FIFOSIZE){
+		semaphore_signal(&FIFOmutex);
 		return;
 	}
 	*(PutPt) = data;
