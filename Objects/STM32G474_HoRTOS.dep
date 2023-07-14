@@ -1,0 +1,162 @@
+Dependencies for Project 'STM32G474', Target 'HoRTOS': (DO NOT MODIFY !)
+CompilerVersion: 5060960::V5.06 update 7 (build 960)::.\ARMCC
+F (.\main.c)(0x64B11317)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+I (scheduler.h)(0x64B10F03)
+I (task.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (.\System\stm32g474xx.h)(0x64B10F03)
+I (.\CMSIS\core_cm4.h)(0x64B10F03)
+I (.\CMSIS\cmsis_version.h)(0x64B10F03)
+I (.\CMSIS\cmsis_compiler.h)(0x64B10F03)
+I (.\CMSIS\cmsis_armcc.h)(0x64B10F03)
+I (.\CMSIS\mpu_armv7.h)(0x64B10F03)
+I (C:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C8430)
+F (.\System\startup_stm32g431xx.s)(0x64B10F03)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 536" --pd "STM32G474xx SETA 1"--list .\listings\startup_stm32g431xx.lst --xref -o .\objects\startup_stm32g431xx.o --depend .\objects\startup_stm32g431xx.d)
+F (.\System\stm32g4xx.h)(0x64B10F03)()
+F (.\System\STM32G4xx_REG_ASM.inc)(0x64B10F03)()
+F (.\System\stm32g474xx.h)(0x64B10F03)()
+F (.\System\system_stm32g4xx.c)(0x64B10F03)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\system_stm32g4xx.o --omf_browse .\objects\system_stm32g4xx.crf --depend .\objects\system_stm32g4xx.d)
+I (System\stm32g4xx.h)(0x64B10F03)
+I (System\stm32g474xx.h)(0x64B10F03)
+I (.\CMSIS\core_cm4.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (.\CMSIS\cmsis_version.h)(0x64B10F03)
+I (.\CMSIS\cmsis_compiler.h)(0x64B10F03)
+I (.\CMSIS\cmsis_armcc.h)(0x64B10F03)
+I (.\CMSIS\mpu_armv7.h)(0x64B10F03)
+I (C:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C8430)
+F (.\handlers.c)(0x64B10F03)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\handlers.o --omf_browse .\objects\handlers.crf --depend .\objects\handlers.d)
+I (handlers.h)(0x64B10F03)
+I (.\System\stm32g4xx.h)(0x64B10F03)
+I (.\System\stm32g474xx.h)(0x64B10F03)
+I (.\CMSIS\core_cm4.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (.\CMSIS\cmsis_version.h)(0x64B10F03)
+I (.\CMSIS\cmsis_compiler.h)(0x64B10F03)
+I (.\CMSIS\cmsis_armcc.h)(0x64B10F03)
+I (.\CMSIS\mpu_armv7.h)(0x64B10F03)
+I (C:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C8430)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+F (.\handlers.h)(0x64B10F03)()
+F (.\led.c)(0x64B10F03)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\led.o --omf_browse .\objects\led.crf --depend .\objects\led.d)
+I (led.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (.\System\stm32g474xx.h)(0x64B10F03)
+I (.\CMSIS\core_cm4.h)(0x64B10F03)
+I (.\CMSIS\cmsis_version.h)(0x64B10F03)
+I (.\CMSIS\cmsis_compiler.h)(0x64B10F03)
+I (.\CMSIS\cmsis_armcc.h)(0x64B10F03)
+I (.\CMSIS\mpu_armv7.h)(0x64B10F03)
+I (C:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C8430)
+I (delay.h)(0x64B10F03)
+F (.\led.h)(0x64B10F03)()
+F (.\uart.c)(0x64B10F03)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\uart.o --omf_browse .\objects\uart.crf --depend .\objects\uart.d)
+I (uart.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (.\System\stm32g474xx.h)(0x64B10F03)
+I (.\CMSIS\core_cm4.h)(0x64B10F03)
+I (.\CMSIS\cmsis_version.h)(0x64B10F03)
+I (.\CMSIS\cmsis_compiler.h)(0x64B10F03)
+I (.\CMSIS\cmsis_armcc.h)(0x64B10F03)
+I (.\CMSIS\mpu_armv7.h)(0x64B10F03)
+I (C:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C8430)
+F (.\uart.h)(0x64B10F03)()
+F (.\delay.s)(0x64B11291)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 536" --pd "STM32G474xx SETA 1"--list .\listings\delay.lst --xref -o .\objects\delay.o --depend .\objects\delay.d)
+F (.\delay.h)(0x64B10F03)()
+F (.\delayus.s)(0x64B112EC)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 536" --pd "STM32G474xx SETA 1"--list .\listings\delayus.lst --xref -o .\objects\delayus.o --depend .\objects\delayus.d)
+F (.\fifo.h)(0x64B10F03)()
+F (.\fifo.c)(0x64B10F67)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\fifo.o --omf_browse .\objects\fifo.crf --depend .\objects\fifo.d)
+I (fifo.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (semaphore.h)(0x64B10F03)
+F (.\tasklist.c)(0x64B10F03)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\tasklist.o --omf_browse .\objects\tasklist.crf --depend .\objects\tasklist.d)
+I (tasklist.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (os_tasks.h)(0x64B10F03)
+I (user_tasks.h)(0x64B10F03)
+F (.\tasklist.h)(0x64B10F03)()
+F (.\task.c)(0x64B10F03)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\task.o --omf_browse .\objects\task.crf --depend .\objects\task.d)
+I (.\System\stm32g474xx.h)(0x64B10F03)
+I (.\CMSIS\core_cm4.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (.\CMSIS\cmsis_version.h)(0x64B10F03)
+I (.\CMSIS\cmsis_compiler.h)(0x64B10F03)
+I (.\CMSIS\cmsis_armcc.h)(0x64B10F03)
+I (.\CMSIS\mpu_armv7.h)(0x64B10F03)
+I (C:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C8430)
+I (task.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (Scheduler.h)(0x64B10F03)
+F (.\task.h)(0x64B10F03)()
+F (.\os_tasks.c)(0x64B10F03)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\os_tasks.o --omf_browse .\objects\os_tasks.crf --depend .\objects\os_tasks.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (.\System\stm32g474xx.h)(0x64B10F03)
+I (.\CMSIS\core_cm4.h)(0x64B10F03)
+I (.\CMSIS\cmsis_version.h)(0x64B10F03)
+I (.\CMSIS\cmsis_compiler.h)(0x64B10F03)
+I (.\CMSIS\cmsis_armcc.h)(0x64B10F03)
+I (.\CMSIS\mpu_armv7.h)(0x64B10F03)
+I (C:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C8430)
+I (os_tasks.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (scheduler.h)(0x64B10F03)
+I (task.h)(0x64B10F03)
+I (tasklist.h)(0x64B10F03)
+I (led.h)(0x64B10F03)
+I (semaphore.h)(0x64B10F03)
+I (delay.h)(0x64B10F03)
+I (uart.h)(0x64B10F03)
+I (fifo.h)(0x64B10F03)
+F (.\os_tasks.h)(0x64B10F03)()
+F (.\schedulerASM.s)(0x64B1139C)(--cpu Cortex-M4.fp.sp --pd "__EVAL SETA 1" -g --apcs=interwork -IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include--pd "__UVISION_VERSION SETA 536" --pd "STM32G474xx SETA 1"--list .\listings\schedulerasm.lst --xref -o .\objects\schedulerasm.o --depend .\objects\schedulerasm.d)
+F (.\scheduler.c)(0x64B1139C)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\scheduler.o --omf_browse .\objects\scheduler.crf --depend .\objects\scheduler.d)
+I (.\System\stm32g474xx.h)(0x64B10F03)
+I (.\CMSIS\core_cm4.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (.\CMSIS\cmsis_version.h)(0x64B10F03)
+I (.\CMSIS\cmsis_compiler.h)(0x64B10F03)
+I (.\CMSIS\cmsis_armcc.h)(0x64B10F03)
+I (.\CMSIS\mpu_armv7.h)(0x64B10F03)
+I (C:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include\system_stm32g4xx.h)(0x603C8430)
+I (scheduler.h)(0x64B10F03)
+I (task.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (tasklist.h)(0x64B10F03)
+F (.\scheduler.h)(0x64B10F03)()
+F (.\semaphore.c)(0x64B10F03)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\semaphore.o --omf_browse .\objects\semaphore.crf --depend .\objects\semaphore.d)
+I (Semaphore.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (task.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+F (.\semaphore.h)(0x64B10F03)()
+F (.\user_tasks.h)(0x64B10F03)()
+F (.\user_tasks.c)(0x64B11059)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\user_tasks.o --omf_browse .\objects\user_tasks.crf --depend .\objects\user_tasks.d)
+I (user_tasks.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
+I (led.h)(0x64B10F03)
+I (uart.h)(0x64B10F03)
+I (fifo.h)(0x64B10F03)
+I (task.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (cmd.h)(0x64B10F03)
+F (.\cmd.c)(0x64B10F03)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\cmd.o --omf_browse .\objects\cmd.crf --depend .\objects\cmd.d)
+I (commands.h)(0x64B10F03)
+I (cmd.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
+F (.\cmd.h)(0x64B10F03)()
+F (.\commands.c)(0x64B10F03)(--c99 --gnu -c --cpu Cortex-M4.fp.sp -D__EVAL -g -O0 --apcs=interwork --split_sections -I .\System -I .\CMSIS-IC:\Users\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4xx\Include-D__UVISION_VERSION="536" -DSTM32G474xx-o .\objects\commands.o --omf_browse .\objects\commands.crf --depend .\objects\commands.d)
+I (task.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x602577DE)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x602577DC)
+I (commands.h)(0x64B10F03)
+I (tasklist.h)(0x64B10F03)
+I (os_tasks.h)(0x64B10F03)
+I (fifo.h)(0x64B10F03)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x602577D4)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x602577DE)
+F (.\commands.h)(0x64B10F03)()

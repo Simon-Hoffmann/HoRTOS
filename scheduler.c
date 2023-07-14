@@ -33,11 +33,6 @@ void schedulerASM_enableInterrupts(void);
 */
 void schedulerASM_start_os(void);
 
-/*SVC functions*/
-int __svc(0x00) svc_service_add(int x, int y); // Service #0 : Add
-int __svc(0x01) svc_service_sub(int x, int y); // Service #1 : Sub
-int __svc(0x02) svc_service_incr(int x); 			 // Service #2 : Incr
-
 
 /* ----------------------- F U N C T I O N S  -------------------------- */
 
@@ -229,28 +224,6 @@ int scheduler_destroy(uint8_t taskID){
 	}
 	schedulerASM_enableInterrupts();
 	return 1;
-}
-
-/*Not enough time to implement :(*/
-void SVC_Handler_C(unsigned int * svc_args)
-{
-	unsigned int svc_number;
-	svc_number = ((char *)svc_args[6])[-2];
-	switch(svc_number)
-	{
-		case 0: 
-			svc_args[0] = svc_args[0] + svc_args[1];
-			break;
-		case 1: 
-			svc_args[0] = svc_args[0] - svc_args[1];
-			break;
-		case 2: 
-			svc_args[0] = svc_args[0] + 1;
-			break;
-		default: // Unknown SVC request
-			break;
-	}
-	return;
 }
 
 /**

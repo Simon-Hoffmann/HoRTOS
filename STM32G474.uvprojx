@@ -388,21 +388,6 @@
               <FileType>1</FileType>
               <FilePath>.\main.c</FilePath>
             </File>
-            <File>
-              <FileName>delay.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\delay.s</FilePath>
-            </File>
-            <File>
-              <FileName>delay.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\delay.h</FilePath>
-            </File>
-            <File>
-              <FileName>delayus.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>.\delayus.s</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -473,6 +458,21 @@
         <Group>
           <GroupName>OS</GroupName>
           <Files>
+            <File>
+              <FileName>delay.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\delay.s</FilePath>
+            </File>
+            <File>
+              <FileName>delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\delay.h</FilePath>
+            </File>
+            <File>
+              <FileName>delayus.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>.\delayus.s</FilePath>
+            </File>
             <File>
               <FileName>fifo.h</FileName>
               <FileType>5</FileType>

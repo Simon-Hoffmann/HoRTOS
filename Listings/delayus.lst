@@ -1,0 +1,78 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; file:  SchedulerASM.s
+    2 00000000         ; author: Simon Hoffmann
+    3 00000000         ; brief:  Delay of CPU execution; implements an exact ti
+                       me delay of 1us
+    4 00000000         
+    5 00000000         
+    6 00000000                 AREA             DELAY, CODE, READONLY
+    7 00000000         
+    8 00000000                 THUMB
+    9 00000000         
+   10 00000000         delayus FUNCTION                     ; start of function
+                                                             
+   11 00000000                 EXPORT           delayus
+   12 00000000 B402            PUSH             {R1}        ; store used regist
+                                                            ers
+   13 00000002         
+   14 00000002 00 00           ALIGN            4           ; following instruc
+                                                            tion to be 32Bit al
+                                                            igned
+   15 00000004 F04F 010C       MOV              R1, #12     ; = 0.001 s / (4 * 
+                                                            1/48000000Hz)
+   16 00000008 FB00 F001       MUL              R0, R0, R1
+   17 0000000C         
+   18 0000000C         loop_delayus
+   19 0000000C F1A0 0001       SUB              R0, R0, #1
+   20 00000010 2800            CMP              R0, #0
+   21 00000012 D1FB            BNE              loop_delayus
+   22 00000014 BF00            NOP
+   23 00000016         
+   24 00000016 BC02            POP              {R1}
+   25 00000018 4770            BX               lr
+   26 0000001A         
+   27 0000001A         
+   28 0000001A                 ENDFUNC                      ; end of function
+   29 0000001A                 END
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=.\objects\delayus.d -o.\objects\delayus.o -IC:\Users\Simon\A
+ppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\ST\STM32G4
+xx\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION SETA 536"
+ --predefine="STM32G474xx SETA 1" --list=.\listings\delayus.lst delayus.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+DELAY 00000000
+
+Symbol: DELAY
+   Definitions
+      At line 6 in file delayus.s
+   Uses
+      None
+Comment: DELAY unused
+delayus 00000000
+
+Symbol: delayus
+   Definitions
+      At line 10 in file delayus.s
+   Uses
+      At line 11 in file delayus.s
+Comment: delayus used once
+loop_delayus 0000000C
+
+Symbol: loop_delayus
+   Definitions
+      At line 18 in file delayus.s
+   Uses
+      At line 21 in file delayus.s
+Comment: loop_delayus used once
+3 symbols
+337 symbols in table

@@ -1,0 +1,180 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000         ; file:  SchedulerASM.s
+    2 00000000         ; author: Simon Hoffmann
+    3 00000000         ; brief:  Functions for scheduling 
+    4 00000000         
+    5 00000000         
+    6 00000000                 AREA             |.text|, CODE, READONLY, ALIGN=
+2
+    7 00000000                 THUMB
+    8 00000000                 REQUIRE8                     ;Specifies current 
+                                                            file to preserve ei
+                                                            ght-byte alignment 
+                                                            of the stack
+    9 00000000                 PRESERVE8
+   10 00000000         
+   11 00000000                 EXTERN           RunPt       ; currently running
+                                                             thread
+   12 00000000                 EXPORT           schedulerASM_disableInterrupts
+   13 00000000                 EXPORT           schedulerASM_enableInterrupts
+   14 00000000                 EXPORT           schedulerASM_start_os
+   15 00000000                 EXPORT           PendSV_Handler
+   16 00000000                 IMPORT           scheduler
+   17 00000000                 IMPORT           SVC_Handler_C
+   18 00000000         
+   19 00000000         
+   20 00000000         schedulerASM_disableInterrupts
+   21 00000000 B672            CPSID            I
+   22 00000002 4770            BX               LR
+   23 00000004         
+   24 00000004         
+   25 00000004         schedulerASM_enableInterrupts
+   26 00000004 B662            CPSIE            I
+   27 00000006 4770            BX               LR
+   28 00000008         
+   29 00000008         PendSV_Handler                       ; 1) Saves R0-R3,R1
+                                                            2,LR,PC,PSR   
+   30 00000008 E92D 0FF0       PUSH             {R4-R11}    ; 2) Save remaining
+                                                             regs r4-11
+   31 0000000C 480F            LDR              R0, =RunPt  ; 3) R0=pointer to 
+                                                            RunPt, old thread
+   32 0000000E 6801            LDR              R1, [R0]    ;    R1 = RunPt
+   33 00000010 F8C1 D000       STR              SP, [R1]    ; 4) Save SP into T
+                                                            CB
+   34 00000014 B501            PUSH             {R0,LR}     ; Registers wont be
+                                                             preserved by c Fun
+                                                            ction call
+   35 00000016 F7FF FFFE       BL               scheduler   ; call Scheduler.c 
+                                                            Scheduler function
+   36 0000001A E8BD 4001       POP              {R0,LR}
+   37 0000001E 6801            LDR              R1, [R0]    ; 5) R1 = RunPt, ne
+                                                            w Thread
+   38 00000020 F8D1 D000       LDR              SP, [R1]    ; 6) new thread SP;
+                                                             SP = RunPt->sp;
+   39 00000024 E8BD 0FF0       POP              {R4-R11}    ; 7) restore regs r
+                                                            4-11
+   40 00000028 4770            BX               LR          ; 8) restore R0-R3,
+                                                            R12,LR,PC,PSR
+   41 0000002A         
+   42 0000002A         schedulerASM_start_os
+   43 0000002A 4808            LDR              R0, =RunPt  ; currently running
+
+
+
+ARM Macro Assembler    Page 2 
+
+
+                                                             thread
+   44 0000002C 6802            LDR              R2, [R0]    ; R2 = value of Run
+                                                            Pt
+   45 0000002E F8D2 D000       LDR              SP, [R2]    ; new thread SP; SP
+                                                             = RunPt->stackPoin
+                                                            ter;
+   46 00000032 E8BD 0FF0       POP              {R4-R11}    ; restore regs r4-1
+                                                            1
+   47 00000036 BC0F            POP              {R0-R3}     ; restore regs r0-3
+                                                            
+   48 00000038 F85D CB04       POP              {R12}
+   49 0000003C F85D EB04       POP              {LR}        ; debug LR value
+   50 00000040 F85D EB04       POP              {LR}        ; PC into LR
+   51 00000044 BC02            POP              {R1}        ; discard PSR
+   52 00000046 B662            CPSIE            I           ; Enable interrupts
+                                                             at processor level
+                                                            
+   53 00000048 4770            BX               LR          ; start first threa
+                                                            d
+   54 0000004A         
+   55 0000004A 00 00           ALIGN
+   56 0000004C                 END
+              00000000 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --apcs=
+interwork --depend=.\objects\schedulerasm.d -o.\objects\schedulerasm.o -IC:\Use
+rs\Simon\AppData\Local\Arm\Packs\Keil\STM32G4xx_DFP\1.4.0\Drivers\CMSIS\Device\
+ST\STM32G4xx\Include --predefine="__EVAL SETA 1" --predefine="__UVISION_VERSION
+ SETA 536" --predefine="STM32G474xx SETA 1" --list=.\listings\schedulerasm.lst 
+schedulerASM.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+.text 00000000
+
+Symbol: .text
+   Definitions
+      At line 6 in file schedulerASM.s
+   Uses
+      None
+Comment: .text unused
+PendSV_Handler 00000008
+
+Symbol: PendSV_Handler
+   Definitions
+      At line 29 in file schedulerASM.s
+   Uses
+      At line 15 in file schedulerASM.s
+Comment: PendSV_Handler used once
+schedulerASM_disableInterrupts 00000000
+
+Symbol: schedulerASM_disableInterrupts
+   Definitions
+      At line 20 in file schedulerASM.s
+   Uses
+      At line 12 in file schedulerASM.s
+Comment: schedulerASM_disableInterrupts used once
+schedulerASM_enableInterrupts 00000004
+
+Symbol: schedulerASM_enableInterrupts
+   Definitions
+      At line 25 in file schedulerASM.s
+   Uses
+      At line 13 in file schedulerASM.s
+Comment: schedulerASM_enableInterrupts used once
+schedulerASM_start_os 0000002A
+
+Symbol: schedulerASM_start_os
+   Definitions
+      At line 42 in file schedulerASM.s
+   Uses
+      At line 14 in file schedulerASM.s
+Comment: schedulerASM_start_os used once
+5 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+RunPt 00000000
+
+Symbol: RunPt
+   Definitions
+      At line 11 in file schedulerASM.s
+   Uses
+      At line 31 in file schedulerASM.s
+      At line 43 in file schedulerASM.s
+
+SVC_Handler_C 00000000
+
+Symbol: SVC_Handler_C
+   Definitions
+      At line 17 in file schedulerASM.s
+   Uses
+      None
+Comment: SVC_Handler_C unused
+scheduler 00000000
+
+Symbol: scheduler
+   Definitions
+      At line 16 in file schedulerASM.s
+   Uses
+      At line 35 in file schedulerASM.s
+Comment: scheduler used once
+3 symbols
+344 symbols in table
