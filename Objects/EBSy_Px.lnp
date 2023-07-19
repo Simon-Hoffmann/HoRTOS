@@ -14,6 +14,7 @@
 ".\objects\schedulerasm.o"
 ".\objects\scheduler.o"
 ".\objects\semaphore.o"
+".\objects\event.o"
 ".\objects\user_tasks.o"
 ".\objects\cmd.o"
 ".\objects\commands.o"

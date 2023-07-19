@@ -27,6 +27,15 @@ bool CPUSTATUS = 0;
 																														
 /* ------------- F u n c t i o n  P r o t o t y p e s  ----------------- */
 
+/**
+* @details From SchedulerASM.s
+*/
+void schedulerASM_disableInterrupts(void); 
+/**
+* @details From SchedulerASM.s
+*/
+void schedulerASM_enableInterrupts(void); 
+
 /* ----------------------- F U N C T I O N S  -------------------------- */
 
 
@@ -42,15 +51,15 @@ void start_task(uint32_t param){
 	task_create(SLEEP_TSK, 0);
 	
 	/*Start User tasks*/
-	task_create(LED_GROUP1_TSK, 0);
-	task_create(LED_GROUP2_TSK, 0);
+	//task_create(LED_GROUP1_TSK, 0);
+	//task_create(LED_GROUP2_TSK, 0);
 	
-	task_create(UART_SEND_TSK, 0);
-	task_create(UART_RECEIVE_TSK, 0);
+	//task_create(UART_SEND_TSK, 0);
+	//task_create(UART_RECEIVE_TSK, 0);
 	
 	/*Hardware initialization*/
-	led_init();
-	uart_init();
+	//led_init();
+	//uart_init();
 	fifo_init();
 	
 	
@@ -84,7 +93,9 @@ void idle_task(uint32_t param){
 				fifo_put('%');
 				fifo_put(0x0D);
 			}
+			schedulerASM_disableInterrupts();
 			system_ms_gone_by = 0;
+			schedulerASM_enableInterrupts();
 			idle_ms_gone_by = 0;
 		}
 	}

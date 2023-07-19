@@ -189,31 +189,31 @@ void SystemInit(void)
     /* from reference manual:  
        To modify the PLL configuration, proceed as follows:  */
        // 1. Disable the PLL by setting PLLON to 0 in Clock control register (RCC_CR).
-	           RCC->CR &= ~(1<<24);  // disable PLL
-	           RCC->CR |=  (1<<16);  // enable HSE
+//						 RCC->CR &= ~(1<<24);  // disable PLL
+//						 RCC->CR |=  (1<<16);  // enable HSE
 
 
-       // 2. Wait until PLLRDY is cleared. The PLL is now fully stopped.
-			       while(RCC->CR & (1<<25));
+//			 // 2. Wait until PLLRDY is cleared. The PLL is now fully stopped.
+//						 while(RCC->CR & (1<<25));
 
 
-       // 3. Change the desired parameter.
-             // f_vco = 12 MHz / 1 *8 = 96 MHz    (N=8, M=1)
-             // f_pll = 96 MHz / 2 = 48 MHz   (PLLR=2 - default!)
-						 RCC->PLLCFGR = ((PLL_N<<8) | ((PLL_M-1)<<4) | (3<<0));
-             //                 N             M-1           HSE
-     
+//			 // 3. Change the desired parameter.
+//						 // f_vco = 12 MHz / 1 *8 = 96 MHz    (N=8, M=1)
+//						 // f_pll = 96 MHz / 2 = 48 MHz   (PLLR=2 - default!)
+//						 RCC->PLLCFGR = ((PLL_N<<8) | ((PLL_M-1)<<4) | (3<<0));
+//						 //                 N             M-1           HSE
+//		 
 
-       // 4. Enable the PLL again by setting PLLON to 1.
-	           RCC->CR |= (1<<24);  // enable PLL
-             while(!(RCC->CR & (1<<25)));
+//			 // 4. Enable the PLL again by setting PLLON to 1.
+//						 RCC->CR |= (1<<24);  // enable PLL
+//						 while(!(RCC->CR & (1<<25)));
 
-       // 5. Enable the desired PLL outputs by configuring PLLPEN, PLLQEN, PLLREN in PLL configuration register (RCC_PLLCFGR).
-             RCC->PLLCFGR |= (1<<24);   // enable PLLR
+//			 // 5. Enable the desired PLL outputs by configuring PLLPEN, PLLQEN, PLLREN in PLL configuration register (RCC_PLLCFGR).
+//						 RCC->PLLCFGR |= (1<<24);   // enable PLLR
 
 
-       // switch to PLLCLK
-			      RCC->CFGR |= 3;   // SW = 11 => selected clock -> pll 
+//			 // switch to PLLCLK
+//						RCC->CFGR |= 3;   // SW = 11 => selected clock -> pll 
 	
 	
 }

@@ -14,7 +14,6 @@
 	EXPORT  schedulerASM_start_os
 	EXPORT  PendSV_Handler
 	IMPORT scheduler
-	IMPORT SVC_Handler_C
 
 
 schedulerASM_disableInterrupts

@@ -58,6 +58,22 @@ int task_create(uint8_t taskID, uint32_t param);
 void task_yield(void);
 
 /**
+* Disables interrupts 
+*
+* @param none
+* @return none
+*/
+void task_enter_critical(void);
+
+/**
+* Enables interrupts 
+*
+* @param none
+* @return none
+*/
+void task_exit_critical(void);
+
+/**
 *	Sets task to sleep
 *
 *	Sets the time for task to sleep and calls task_yield

@@ -22,6 +22,15 @@ tcbType *RunPt;	///<Pointer to the currently running thread control block
 */
 void schedulerASM_handler(void);	
 
+/**
+* @details From SchedulerASM.s
+*/
+void schedulerASM_disableInterrupts(void); 
+/**
+* @details From SchedulerASM.s
+*/
+void schedulerASM_enableInterrupts(void); 
+
 /* ----------------------- F U N C T I O N S  -------------------------- */
 
 /**
@@ -56,6 +65,26 @@ int task_create(uint8_t taskID, uint32_t param){
 */
 void task_yield(void){
 	SCB->ICSR |= 0x10000000;						//trigger PendSV 
+}
+
+/**
+* Disables interrupts 
+*
+* @param none
+* @return none
+*/
+void task_enter_critical(void){
+	schedulerASM_disableInterrupts();
+}
+
+/**
+* Enables interrupts 
+*
+* @param none
+* @return none
+*/
+void task_exit_critical(void){
+	schedulerASM_enableInterrupts();
 }
 
 /**
